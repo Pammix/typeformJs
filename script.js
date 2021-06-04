@@ -1,5 +1,17 @@
 
 'use strict';
+
+const express = require('express')
+const app = express()
+const port = 4000
+
+app.get('/', (req, res) => {
+    module.exports.addLimitLogic();
+})
+
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
 const tf = require('@typeform/api-client')
 const typeform = tf.createClient({
     token: 'ASKUkMNsFgtWzjAeDKsfAjCN6z4BHZtq24rhPdGY7pzM'
@@ -75,4 +87,3 @@ module.exports.addLimitLogic = async (event, context, callback) => {
 
     callback(null, resp);
 };
-addLimitLogic();
