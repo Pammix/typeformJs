@@ -75,3 +75,4 @@ module.exports.addLimitLogic = async (event, context, callback) => {
 
     callback(null, resp);
 };
+addLimitLogic();
